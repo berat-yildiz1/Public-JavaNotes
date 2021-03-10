@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -6,10 +8,12 @@ public class Main {
         tut.add(10);
         tut.add(101);
 
-        System.out.println(tut.get(0));
+        for(Object i: tut){
+            System.out.println(i);
+        }
 
 
-        
+
 
 
     }
