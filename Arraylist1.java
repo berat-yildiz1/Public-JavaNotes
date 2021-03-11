@@ -15,7 +15,7 @@ public class Main {
 
         //tut.remove(0)-->new 0 index value=101
         //tut.clear()-->clears the tut
-        //ArrayList<String> tut = new ArrayList()--only string expression type-safe
+        //ArrayList<String> tut = new ArrayList<String>()--only string expression type-safe
 
 
 
