@@ -9,14 +9,15 @@ public class Main {
         PreparedStatement statement=null;
         ResultSet resultSet;
         try {
-            connection=helper.getConnection();
-            statement=connection.prepareStatement("insert into city (Name,CountryCode,District,Population) values('Duzce','TUR','Duzce','50000')");
+          connection=helper.getConnection();
+            String sql ="insert into city (Name,CountryCode,District,Population) values(?,?,?,?)";
+            statement=connection.prepareStatement(sql);
+            statement.setString(1,"Duzce2");
+            statement.setString(2,"TUR");
+            statement.setString(3,"Turkey");
+            statement.setInt(4,117000);
             statement.executeUpdate();
-
             System.out.println("Kayıt Eklendi");
-
-
-
         }
         catch (SQLException e){
             helper.showErrorMessage(e);
